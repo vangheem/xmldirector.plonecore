@@ -64,16 +64,16 @@ def version_handler(obj, event):
         return
 
     return
-    registry = getUtility(IRegistry)
-    settings = registry.forInterface(IWebdavSettings)
-    if not settings.versioning_enabled:
-        return
-
-    context = event.object
-    handle = getUtility(IWebdavHandle).webdav_handle()
-    storage_path = util.get_storage_path(context)
-
-    for field in get_all_xml_fields(context):
-        content = xml_get(context, field.getName())
-        print field
-        print content
+#    registry = getUtility(IRegistry)
+#    settings = registry.forInterface(IWebdavSettings)
+#    if not settings.versioning_enabled:
+#        return
+#
+#    context = event.object
+#    handle = getUtility(IWebdavHandle).webdav_handle()
+#    storage_path = util.get_storage_path(context)
+#
+#    for field in get_all_xml_fields(context):
+#        content = xml_get(context, field.getName())
+#        print field
+#        print content
